@@ -211,7 +211,7 @@
       position: relative;
       flex: 0 0 100%;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 4 / 3;
       padding: 0;
       border: 0;
       border-radius: 0;
@@ -285,46 +285,23 @@
       padding-bottom: 4px;
     }
     .linkedin-post-card {
-      min-height: 100%;
-      aspect-ratio: 4 / 5;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 14px;
-      padding: 18px;
+      aspect-ratio: 3 / 5;
+      position: relative;
       border: 1px solid var(--border);
       border-radius: 8px;
+      overflow: hidden;
       background: var(--surface);
       box-shadow: 0 4px 16px rgba(18, 28, 45, 0.04);
     }
-    .linkedin-post-label {
-      display: inline-flex;
-      width: fit-content;
-      border-radius: 999px;
-      background: #eef4ff;
-      color: #174ea6;
-      padding: 5px 9px;
-      font-size: 0.74rem;
-      font-weight: 800;
+    .linkedin-post-frame {
+      position: absolute;
+      inset: 0;
+      width: 200%;
+      height: 200%;
+      border: 0;
+      transform: scale(0.5);
+      transform-origin: top left;
     }
-    .linkedin-post-card h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      line-height: 1.18;
-    }
-    .linkedin-post-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .linkedin-post-link {
-      display: inline-flex;
-      align-self: end;
-      color: var(--accent);
-      font-size: 0.86rem;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .linkedin-post-link:hover { text-decoration: underline; }
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -500,28 +477,13 @@
       </div>
       <div class="linkedin-posts" aria-label="LinkedIn posts">
         <article class="linkedin-post-card">
-          <span class="linkedin-post-label">Latest post</span>
-          <div>
-            <h3>Milan AI Week, AI agents, and Speechmatics</h3>
-            <p>Recent thoughts from Milan AI Week and hands-on work around AI agents and voice technology.</p>
-          </div>
-          <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_milanaiweek-aiagents-speechmatics-ugcPost-7463174175419994114-hfXo/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+          <iframe class="linkedin-post-frame" title="Latest LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463174175419994114"></iframe>
         </article>
         <article class="linkedin-post-card">
-          <span class="linkedin-post-label">Previous post</span>
-          <div>
-            <h3>AI product building and hackathon momentum</h3>
-            <p>A previous update on building, presenting, and iterating AI products in fast-moving environments.</p>
-          </div>
-          <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7458597758732611585/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+          <iframe class="linkedin-post-frame" title="Previous LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
         </article>
         <article class="linkedin-post-card">
-          <span class="linkedin-post-label">Presentation post</span>
-          <div>
-            <h3>Presentation moment</h3>
-            <p>A post featuring a presentation image and another snapshot from the project and AI community work.</p>
-          </div>
-          <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7457493789935386624/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+          <iframe class="linkedin-post-frame" title="LinkedIn post with presentation image" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7457493789935386624"></iframe>
         </article>
       </div>
     </section>
