@@ -278,48 +278,49 @@
     .linkedin-section {
       padding-bottom: 56px;
     }
-    .linkedin-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(18, 28, 45, 0.04);
-    }
-    .linkedin-embeds {
+    .linkedin-posts {
       display: grid;
       grid-template-columns: repeat(3, minmax(280px, 1fr));
-      gap: 12px;
-      padding: 14px;
-      background: var(--surface-soft);
+      gap: 18px;
+      padding-bottom: 4px;
     }
-    .linkedin-frame-wrap {
-      min-height: 820px;
+    .linkedin-post-card {
+      min-height: 100%;
+      aspect-ratio: 4 / 5;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 14px;
+      padding: 18px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      overflow: visible;
       background: var(--surface);
+      box-shadow: 0 4px 16px rgba(18, 28, 45, 0.04);
     }
-    .linkedin-frame {
-      display: none;
-      width: 100%;
-      height: 820px;
-      min-height: 820px;
-      border: 0;
+    .linkedin-post-label {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: #174ea6;
+      padding: 5px 9px;
+      font-size: 0.74rem;
+      font-weight: 800;
     }
-    .linkedin-placeholder {
-      min-height: 820px;
-      display: grid;
-      place-items: center;
-      padding: 24px;
+    .linkedin-post-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.18;
+    }
+    .linkedin-post-card p {
+      margin: 0;
       color: var(--muted);
-      text-align: center;
-      font-weight: 700;
+      font-size: 0.95rem;
     }
     .linkedin-post-link {
       display: inline-flex;
-      padding: 10px 14px 12px;
+      align-self: end;
       color: var(--accent);
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 800;
       text-decoration: none;
     }
@@ -405,13 +406,14 @@
         align-items: start;
         flex-direction: column;
       }
-      .linkedin-embeds { grid-template-columns: 1fr; }
+      .linkedin-posts { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
     }
 
     @media (max-width: 480px) {
       .hero-actions .btn { width: 100%; }
       .hero-media { min-height: 320px; }
       .grid { grid-template-columns: 1fr; }
+      .linkedin-posts { grid-template-columns: 1fr; }
       .lightbox { padding: 12px; }
       .lightbox-image {
         max-width: 94vw;
@@ -496,30 +498,31 @@
         <h2 id="linkedin-title">LinkedIn</h2>
         <p><a href="https://www.linkedin.com/in/alessandro-bonanno-173995358/" target="_blank" rel="noreferrer">go to LinkedIn -&gt;</a></p>
       </div>
-      <div class="linkedin-card">
-        <div class="linkedin-embeds" aria-label="LinkedIn post embeds">
-          <div class="linkedin-frame-wrap">
-            <iframe class="linkedin-frame" title="Latest LinkedIn post" loading="lazy" data-linkedin-embed-src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463174175419994114"></iframe>
-            <div class="linkedin-placeholder">
-              <span>Latest LinkedIn post</span>
-            </div>
-            <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_milanaiweek-aiagents-speechmatics-ugcPost-7463174175419994114-hfXo/" target="_blank" rel="noreferrer">Open full post</a>
+      <div class="linkedin-posts" aria-label="LinkedIn posts">
+        <article class="linkedin-post-card">
+          <span class="linkedin-post-label">Latest post</span>
+          <div>
+            <h3>Milan AI Week, AI agents, and Speechmatics</h3>
+            <p>Recent thoughts from Milan AI Week and hands-on work around AI agents and voice technology.</p>
           </div>
-          <div class="linkedin-frame-wrap">
-            <iframe class="linkedin-frame" title="Previous LinkedIn post" loading="lazy" data-linkedin-embed-src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
-            <div class="linkedin-placeholder">
-              <span>Previous LinkedIn post</span>
-            </div>
-            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7458597758732611585/" target="_blank" rel="noreferrer">Open full post</a>
+          <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_milanaiweek-aiagents-speechmatics-ugcPost-7463174175419994114-hfXo/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+        </article>
+        <article class="linkedin-post-card">
+          <span class="linkedin-post-label">Previous post</span>
+          <div>
+            <h3>AI product building and hackathon momentum</h3>
+            <p>A previous update on building, presenting, and iterating AI products in fast-moving environments.</p>
           </div>
-          <div class="linkedin-frame-wrap">
-            <iframe class="linkedin-frame" title="LinkedIn post with presentation image" loading="lazy" data-linkedin-embed-src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7457493789935386624"></iframe>
-            <div class="linkedin-placeholder">
-              <span>LinkedIn post with presentation image</span>
-            </div>
-            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7457493789935386624/" target="_blank" rel="noreferrer">Open full post</a>
+          <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7458597758732611585/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+        </article>
+        <article class="linkedin-post-card">
+          <span class="linkedin-post-label">Presentation post</span>
+          <div>
+            <h3>Presentation moment</h3>
+            <p>A post featuring a presentation image and another snapshot from the project and AI community work.</p>
           </div>
-        </div>
+          <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7457493789935386624/" target="_blank" rel="noreferrer">Open on LinkedIn -&gt;</a>
+        </article>
       </div>
     </section>
 
@@ -647,21 +650,12 @@
     const closeButton = document.querySelector(".lightbox-close");
     const prevButton = document.querySelector(".lightbox-prev");
     const nextButton = document.querySelector(".lightbox-next");
-    const linkedInFrames = Array.from(document.querySelectorAll(".linkedin-frame"));
     let activeGallery = [];
     let activeIndex = 0;
 
     galleryButtons.forEach((button) => {
       const src = button.dataset.src || button.querySelector("img")?.getAttribute("src");
       if (src) button.style.setProperty("--gallery-bg", `url("${src}")`);
-    });
-
-    linkedInFrames.forEach((frame) => {
-      if (!frame.dataset.linkedinEmbedSrc) return;
-      frame.src = frame.dataset.linkedinEmbedSrc;
-      frame.style.display = "block";
-      const placeholder = frame.nextElementSibling;
-      if (placeholder?.classList.contains("linkedin-placeholder")) placeholder.hidden = true;
     });
 
     function openLightbox(button) {
