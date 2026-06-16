@@ -273,27 +273,27 @@
     }
     .linkedin-embeds {
       display: grid;
-      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      grid-template-columns: 1fr;
       gap: 12px;
       padding: 14px;
       background: var(--surface-soft);
     }
     .linkedin-frame-wrap {
-      min-height: 760px;
+      min-height: 210px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      overflow: visible;
+      overflow: hidden;
       background: var(--surface);
     }
     .linkedin-frame {
       display: none;
       width: 100%;
-      height: 760px;
-      min-height: 760px;
+      height: 520px;
+      min-height: 520px;
       border: 0;
     }
     .linkedin-placeholder {
-      min-height: 760px;
+      min-height: 210px;
       display: grid;
       place-items: center;
       padding: 24px;
@@ -301,6 +301,15 @@
       text-align: center;
       font-weight: 700;
     }
+    .linkedin-post-link {
+      display: inline-flex;
+      padding: 10px 14px 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .linkedin-post-link:hover { text-decoration: underline; }
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -480,18 +489,21 @@
             <div class="linkedin-placeholder">
               <span>Latest LinkedIn post</span>
             </div>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_milanaiweek-aiagents-speechmatics-ugcPost-7463174175419994114-hfXo/" target="_blank" rel="noreferrer">Open full post</a>
           </div>
           <div class="linkedin-frame-wrap">
             <iframe class="linkedin-frame" title="Previous LinkedIn post" loading="lazy" data-linkedin-embed-src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
             <div class="linkedin-placeholder">
               <span>Previous LinkedIn post</span>
             </div>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7458597758732611585/" target="_blank" rel="noreferrer">Open full post</a>
           </div>
           <div class="linkedin-frame-wrap">
             <iframe class="linkedin-frame" title="LinkedIn post with presentation image" loading="lazy" data-linkedin-embed-src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7457493789935386624"></iframe>
             <div class="linkedin-placeholder">
               <span>LinkedIn post with presentation image</span>
             </div>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7457493789935386624/" target="_blank" rel="noreferrer">Open full post</a>
           </div>
         </div>
       </div>
