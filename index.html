@@ -204,8 +204,11 @@
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       border-bottom: 1px solid var(--border);
-      background: var(--surface-soft);
-      scrollbar-width: thin;
+      background: #f8fafc;
+      scrollbar-width: none;
+    }
+    .project-gallery::-webkit-scrollbar {
+      display: none;
     }
     .gallery-item {
       position: relative;
@@ -216,20 +219,9 @@
       border: 0;
       border-radius: 0;
       overflow: hidden;
-      background: var(--surface-soft);
+      background: #f8fafc;
       cursor: zoom-in;
       scroll-snap-align: start;
-    }
-    .gallery-item::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: var(--gallery-bg);
-      background-position: center;
-      background-size: cover;
-      filter: blur(18px);
-      transform: scale(1.08);
-      opacity: 0.42;
     }
     .gallery-item img {
       position: relative;
@@ -248,6 +240,33 @@
       outline: 3px solid rgba(36, 89, 255, 0.35);
       outline-offset: 2px;
     }
+    .gallery-shell {
+      position: relative;
+    }
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(22, 24, 33, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--text);
+      font-size: 1.35rem;
+      line-height: 1;
+      transform: translateY(-50%);
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(18, 28, 45, 0.12);
+    }
+    .gallery-nav:hover,
+    .gallery-nav:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
+      outline: none;
+    }
+    .gallery-nav.prev { left: 10px; }
+    .gallery-nav.next { right: 10px; }
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -615,9 +634,41 @@
     let activeGallery = [];
     let activeIndex = 0;
 
-    galleryButtons.forEach((button) => {
-      const src = button.dataset.src || button.querySelector("img")?.getAttribute("src");
-      if (src) button.style.setProperty("--gallery-bg", `url("${src}")`);
+    document.querySelectorAll(".project-gallery").forEach((gallery) => {
+      const shell = document.createElement("div");
+      shell.className = "gallery-shell";
+      gallery.parentNode.insertBefore(shell, gallery);
+      shell.appendChild(gallery);
+
+      const prev = document.createElement("button");
+      prev.className = "gallery-nav prev";
+      prev.type = "button";
+      prev.setAttribute("aria-label", "Previous project image");
+      prev.textContent = "<";
+
+      const next = document.createElement("button");
+      next.className = "gallery-nav next";
+      next.type = "button";
+      next.setAttribute("aria-label", "Next project image");
+      next.textContent = ">";
+
+      shell.append(prev, next);
+
+      const moveGallery = (direction) => {
+        const currentIndex = Math.round(gallery.scrollLeft / gallery.clientWidth);
+        const maxIndex = Math.max(0, gallery.children.length - 1);
+        const nextIndex = Math.min(maxIndex, Math.max(0, currentIndex + direction));
+        gallery.scrollTo({ left: nextIndex * gallery.clientWidth, behavior: "smooth" });
+      };
+
+      prev.addEventListener("click", (event) => {
+        event.stopPropagation();
+        moveGallery(-1);
+      });
+      next.addEventListener("click", (event) => {
+        event.stopPropagation();
+        moveGallery(1);
+      });
     });
 
     function openLightbox(button) {
