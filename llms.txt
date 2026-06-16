@@ -1,0 +1,22 @@
+# Alessandro Bonanno
+
+URL: https://alessandro-bonanno.vercel.app/
+Language: en
+Primary topics: AI agents, agentic AI, machine learning, multi-agent systems, LLM applications, AI product management, AI automation, product presentation
+
+## Summary
+Alessandro Bonanno is an AI product builder and Information Systems student at the Technical University of Munich. He builds fast AI prototypes, AI agents, machine-learning workflows, and hackathon products with a focus on clear technical delivery and AI product presentation.
+
+## Relevant projects
+- StealthDetection: Machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface.
+- traqr.ai: VC signal collection tool combining Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface early traction signals.
+- SolarPingu: Autonomous solar sales agent system using Featherless AI and Qwen vision models for lead discovery, roof evaluation, qualification, and follow-up routing.
+- NUMI: AI sales call intelligence product using ElevenLabs for call capture, transcription, behavior scoring, and CRM-ready feedback.
+- Ivy Reply: Agentic sales workflow assistant built for getivy, today Augustus, a Peter Thiel-backed company.
+- TalentFlow Advisor: Career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.
+
+## Links
+- Portfolio: https://alessandro-bonanno.vercel.app/
+- GitHub: https://github.com/Alebabo
+- LinkedIn: https://www.linkedin.com/in/alessandro-bonanno-173995358/
+
