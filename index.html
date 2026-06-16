@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alessandro Bonanno - AI, Product, Hackathon Projects</title>
-  <meta name="description" content="Persoenliche Portfolio-Seite von Alessandro Bonanno: TUM Wirtschaftsinformatik, TMA IT Solutions, AI Agents, Produktmanagement und Hackathon-Projekte.">
-  <meta name="keywords" content="Alessandro Bonanno, TUM, Wirtschaftsinformatik, AI Agents, Agentic AI, Product Management, TMA IT Solutions, Deutschlandstipendium, Hackathon, StealthDetection, NUMI, traqr, SolarPingu">
+  <meta name="description" content="Personal portfolio page by Alessandro Bonanno: TUM information systems, TMA IT Solutions, AI agents, product management, and hackathon projects.">
+  <meta name="keywords" content="Alessandro Bonanno, TUM, Information Systems, AI Agents, Agentic AI, Product Management, TMA IT Solutions, Deutschlandstipendium, Hackathon, StealthDetection, NUMI, traqr, SolarPingu">
   <meta name="author" content="Alessandro Bonanno">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Alessandro Bonanno">
   <meta property="og:description" content="AI-focused Information Systems student at TUM, founder of TMA IT Solutions, and builder of hackathon projects.">
-  <meta property="og:image" content="assets/alessandro-bonanno.jpeg">
+  <meta property="og:image" content="pictures/StealthDetection_Final/pb.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Alessandro Bonanno">
   <meta name="twitter:description" content="AI, product, and hackathon portfolio.">
@@ -34,7 +34,7 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Calibri, "Segoe UI", Candara, Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.5;
@@ -177,33 +177,6 @@
       color: var(--muted);
       font-size: 0.98rem;
     }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin: 10px 0 46px;
-    }
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-    }
-    .stat strong {
-      display: block;
-      font-size: 1.45rem;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .stat span {
-      display: block;
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -277,6 +250,37 @@
       color: #343947;
       font-size: 0.91rem;
     }
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .gallery-item {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--surface-soft);
+      cursor: zoom-in;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.18s ease;
+    }
+    .gallery-item:hover img,
+    .gallery-item:focus-visible img {
+      transform: scale(1.035);
+    }
+    .gallery-item:focus-visible {
+      outline: 3px solid rgba(36, 89, 255, 0.35);
+      outline-offset: 2px;
+    }
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -304,11 +308,120 @@
       text-decoration: none;
     }
     .links a:hover { text-decoration: underline; }
+    .linkedin-section {
+      padding-bottom: 56px;
+    }
+    .linkedin-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+      gap: 18px;
+      align-items: stretch;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(18, 28, 45, 0.04);
+    }
+    .linkedin-copy {
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      padding: 24px;
+      background: #f8fafc;
+    }
+    .linkedin-copy h3 {
+      margin: 0;
+      font-size: 1.22rem;
+      letter-spacing: 0;
+    }
+    .linkedin-copy p {
+      margin: 0;
+      color: #343947;
+      font-size: 0.94rem;
+    }
+    .linkedin-frame-wrap {
+      min-height: 360px;
+      background: var(--surface-soft);
+    }
+    .linkedin-frame {
+      display: none;
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+    }
+    .linkedin-placeholder {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 700;
+    }
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
       padding: 24px 0 40px;
       font-size: 0.9rem;
+    }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(12, 16, 24, 0.88);
+    }
+    .lightbox[aria-hidden="false"] {
+      display: flex;
+    }
+    .lightbox-image {
+      max-width: min(1120px, 88vw);
+      max-height: 84vh;
+      border-radius: 8px;
+      object-fit: contain;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+      background: #fff;
+    }
+    .lightbox-btn {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      font-size: 1.8rem;
+      line-height: 1;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+    .lightbox-btn:hover,
+    .lightbox-btn:focus-visible {
+      background: rgba(255,255,255,0.24);
+      outline: none;
+    }
+    .lightbox-close {
+      top: 18px;
+      right: 18px;
+      font-size: 1.55rem;
+    }
+    .lightbox-prev { left: 18px; }
+    .lightbox-next { right: 18px; }
+    .lightbox-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 16px;
+      color: rgba(255,255,255,0.86);
+      font-size: 0.9rem;
+      text-align: center;
     }
 
     @media (max-width: 820px) {
@@ -327,14 +440,21 @@
         align-items: start;
         flex-direction: column;
       }
-      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .linkedin-card { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
       .hero-actions .btn { width: 100%; }
       .hero-media { min-height: 320px; }
-      .stats { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
+      .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lightbox { padding: 12px; }
+      .lightbox-image {
+        max-width: 94vw;
+        max-height: 76vh;
+      }
+      .lightbox-prev { left: 10px; }
+      .lightbox-next { right: 10px; }
     }
   </style>
   <script type="application/ld+json">
@@ -346,7 +466,7 @@
       "name": "Alessandro Bonanno",
       "email": "ale.bonanno2006@gmail.com",
       "url": "https://alessandro-bonanno.vercel.app",
-      "image": "assets/alessandro-bonanno.jpeg",
+      "image": "pictures/StealthDetection_Final/pb.jpeg",
       "sameAs": [
         "https://github.com/Alebabo",
         "https://www.linkedin.com/in/alessandro-bonanno-173995358/"
@@ -379,30 +499,29 @@
   <main>
     <section class="hero page" aria-labelledby="hero-title">
       <div>
-        <p class="eyebrow">TUM Information Systems · AI Builder · Founder</p>
         <h1 id="hero-title">Alessandro Bonanno</h1>
         <p class="lead">
-          Ich baue AI-Produkte, Agenten und schnelle Prototypen an der Schnittstelle von
-          Wirtschaftsinformatik, Produktstrategie und Software Delivery. Aktuell studiere ich an der TUM,
-          fuehre TMA IT Solutions mit und arbeite an Projekten rund um Agentic AI, Dashboards und Automatisierung.
+          I build AI products, agents, and fast prototypes at the intersection of information systems,
+          product strategy, and software delivery. I am currently studying at TUM, co-leading TMA IT Solutions,
+          and working on projects around agentic AI, dashboards, and automation.
         </p>
         <div class="hero-actions" aria-label="Profile links">
-          <a class="btn primary" href="#projects">Projekte ansehen</a>
+          <a class="btn primary" href="#projects">View projects</a>
           <a class="btn" href="https://github.com/Alebabo" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/alessandro-bonanno-173995358/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
       <figure class="hero-media">
-        <img src="assets/alessandro-bonanno.jpeg" alt="Alessandro Bonanno bei einer Praesentation an der Technischen Universitaet Muenchen">
+        <img src="pictures/StealthDetection_Final/pb.jpeg" alt="Alessandro Bonanno presenting at the Technical University of Munich">
         <figcaption class="hero-meta" aria-label="Key profile attributes">
-          <span class="pill">Deutschlandstipendium</span>
+          <span class="pill">Scholarship Recipient</span>
           <span class="pill">TMA IT Solutions</span>
           <span class="pill">AI Hackathons</span>
         </figcaption>
       </figure>
     </section>
 
-    <section class="page" aria-labelledby="signals-title">
+    <section class="page" aria-label="Profile information">
       <div class="sr-only">
         Alessandro Bonanno is an Information Systems student at Technical University of Munich, co-founder and CEO
         of TMA IT Solutions, a Deutschlandstipendium scholar, and an AI builder focused on agentic AI, product
@@ -411,18 +530,35 @@
         StealthDetection, traqr.ai, SolarPingu, NUMI, Ivy Reply, and TalentFlow Advisor. Languages: German native,
         Italian native, English fluent C1.
       </div>
-      <div class="stats" id="signals-title">
-        <div class="stat"><strong>TUM</strong><span>B.Sc. Wirtschaftsinformatik</span></div>
-        <div class="stat"><strong>4x</strong><span>Hackathon-Erfahrung</span></div>
-        <div class="stat"><strong>AI</strong><span>Agents & Automation</span></div>
-        <div class="stat"><strong>TMA</strong><span>Founder & CEO</span></div>
+    </section>
+
+    <section class="page linkedin-section" id="linkedin" aria-labelledby="linkedin-title">
+      <div class="section-head">
+        <h2 id="linkedin-title">LinkedIn</h2>
+        <p>Current thoughts on AI, product, hackathons, and projects.</p>
+      </div>
+      <div class="linkedin-card">
+        <div class="linkedin-copy">
+          <p class="eyebrow">Latest post</p>
+          <h3>My latest LinkedIn update</h3>
+          <p>LinkedIn shows my latest activity directly on my profile. Public individual posts can also be embedded here.</p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/alessandro-bonanno-173995358/recent-activity/all/" target="_blank" rel="noreferrer">View latest post on LinkedIn</a>
+          </div>
+        </div>
+        <div class="linkedin-frame-wrap">
+          <iframe class="linkedin-frame" title="Latest LinkedIn post" loading="lazy" data-linkedin-embed-src=""></iframe>
+          <div class="linkedin-placeholder">
+            <span>The latest public LinkedIn post is available through the profile link.</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="page" id="projects" aria-labelledby="projects-title">
       <div class="section-head">
         <h2 id="projects-title">Hackathon Projects</h2>
-        <p>Ausgewaehlte Projekte aus AI-, Energy-, Sales- und Product-Hackathons. Fokus: schnell validieren, technisch liefern, klar praesentieren.</p>
+        <p>Selected projects from AI, energy, sales, and product hackathons. Focus: validate quickly, ship technically, and present clearly.</p>
       </div>
       <div class="grid">
         <article class="card">
@@ -431,6 +567,14 @@
             <h3>StealthDetection</h3>
             <p class="hackathon">TUM.ai × Invertix.ai Energy Hack</p>
             <p class="desc">Custom-trained ML model for energy theft detection with real-time anomaly scoring across smart meter connectors and an operator dashboard.</p>
+            <div class="project-gallery" aria-label="StealthDetection images">
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Dashboard.png" data-caption="StealthDetection Dashboard"><img src="pictures/StealthDetection_Final/Dashboard.png" alt="StealthDetection Dashboard"></button>
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/accuracy.PNG" data-caption="StealthDetection Accuracy"><img src="pictures/StealthDetection_Final/accuracy.PNG" alt="StealthDetection Accuracy"></button>
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/connectors.png" data-caption="StealthDetection Connectors"><img src="pictures/StealthDetection_Final/connectors.png" alt="StealthDetection Connectors"></button>
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie1.PNG" data-caption="StealthDetection Pitch Slide"><img src="pictures/StealthDetection_Final/Folie1.PNG" alt="StealthDetection Pitch Slide"></button>
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie4.PNG" data-caption="StealthDetection Modell Slide"><img src="pictures/StealthDetection_Final/Folie4.PNG" alt="StealthDetection Modell Slide"></button>
+              <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie8.PNG" data-caption="StealthDetection Ergebnis Slide"><img src="pictures/StealthDetection_Final/Folie8.PNG" alt="StealthDetection Ergebnis Slide"></button>
+            </div>
             <div class="tags"><span class="tag">AI</span><span class="tag">Energy</span><span class="tag">Python</span><span class="tag">Anomaly Detection</span></div>
             <div class="links"><a href="https://github.com/NickGitHubStart/Powerrangers" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -442,6 +586,13 @@
             <h3>traqr.ai</h3>
             <p class="hackathon">TUM.ai E-Lab × Project A VC</p>
             <p class="desc">Social graph intelligence for venture teams: founder-network mapping, signal convergence, and early traction discovery.</p>
+            <div class="project-gallery" aria-label="traqr.ai images">
+              <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/titelbild.png" data-caption="traqr.ai Titelbild"><img src="pictures/traqr/titelbild.png" alt="traqr.ai Titelbild"></button>
+              <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-29 143044.png" data-caption="traqr.ai Interface"><img src="pictures/traqr/Screenshot 2026-05-29 143044.png" alt="traqr.ai Interface"></button>
+              <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-05 000732.png" data-caption="traqr.ai Network View"><img src="pictures/traqr/Screenshot 2026-05-05 000732.png" alt="traqr.ai Network View"></button>
+              <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-05 000846.png" data-caption="traqr.ai Founder Signals"><img src="pictures/traqr/Screenshot 2026-05-05 000846.png" alt="traqr.ai Founder Signals"></button>
+              <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/example.png" data-caption="traqr.ai Example"><img src="pictures/traqr/example.png" alt="traqr.ai Example"></button>
+            </div>
             <div class="tags"><span class="tag">AI Agent</span><span class="tag">VC</span><span class="tag">Network Intelligence</span></div>
             <div class="links"><a href="https://github.com/Alebabo/anytrace" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -453,6 +604,12 @@
             <h3>SolarPingu</h3>
             <p class="hackathon">lablab.ai Multi-Agent Solar Sales</p>
             <p class="desc">Multi-agent solar sales assistant for lead qualification, customer context, and automated follow-up workflows.</p>
+            <div class="project-gallery" aria-label="SolarPingu images">
+              <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/titelbild.png" data-caption="SolarPingu Titelbild"><img src="pictures/SolarPingu/titelbild.png" alt="SolarPingu Titelbild"></button>
+              <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/Landingpage.png" data-caption="SolarPingu Landingpage"><img src="pictures/SolarPingu/Landingpage.png" alt="SolarPingu Landingpage"></button>
+              <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" data-caption="SolarPingu App Screenshot"><img src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" alt="SolarPingu App Screenshot"></button>
+              <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/agent_orchestration.png" data-caption="SolarPingu Agent Orchestration"><img src="pictures/SolarPingu/agent_orchestration.png" alt="SolarPingu Agent Orchestration"></button>
+            </div>
             <div class="tags"><span class="tag">Multi-Agent</span><span class="tag">Sales</span><span class="tag">Automation</span></div>
             <div class="links"><a href="https://github.com/Alebabo/lablab_multiagent_solar_sales" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -464,6 +621,11 @@
             <h3>NUMI</h3>
             <p class="hackathon">AI Product Prototype</p>
             <p class="desc">Conversational product prototype exploring personalized AI support, memory, and emotionally aware user interaction.</p>
+            <div class="project-gallery" aria-label="NUMI images">
+              <button class="gallery-item" type="button" data-gallery="NUMI" data-src="pictures/Numi/Screenshot 2026-06-06 183048.png" data-caption="NUMI Screenshot"><img src="pictures/Numi/Screenshot 2026-06-06 183048.png" alt="NUMI Screenshot"></button>
+              <button class="gallery-item" type="button" data-gallery="NUMI" data-src="pictures/Numi/pitch slide.png" data-caption="NUMI Pitch Slide"><img src="pictures/Numi/pitch slide.png" alt="NUMI Pitch Slide"></button>
+              <button class="gallery-item" type="button" data-gallery="NUMI" data-src="pictures/Numi/chatgpt vs numi.png" data-caption="ChatGPT vs NUMI"><img src="pictures/Numi/chatgpt vs numi.png" alt="ChatGPT vs NUMI"></button>
+            </div>
             <div class="tags"><span class="tag">LLM</span><span class="tag">Product</span><span class="tag">Prototype</span></div>
             <div class="links"><a href="https://github.com/Alebabo/NUMI" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -475,6 +637,10 @@
             <h3>Ivy Reply</h3>
             <p class="hackathon">AI Sales Workflow</p>
             <p class="desc">Agentic reply assistant for sales workflows with structured context, response drafting, and practical automation patterns.</p>
+            <div class="project-gallery" aria-label="Ivy Reply images">
+              <button class="gallery-item" type="button" data-gallery="Ivy Reply" data-src="pictures/Ivyreply/Screenshot 2026-05-29 145555.png" data-caption="Ivy Reply Dashboard"><img src="pictures/Ivyreply/Screenshot 2026-05-29 145555.png" alt="Ivy Reply Dashboard"></button>
+              <button class="gallery-item" type="button" data-gallery="Ivy Reply" data-src="pictures/Ivyreply/Screenshot 2026-05-29 145658.png" data-caption="Ivy Reply Workflow"><img src="pictures/Ivyreply/Screenshot 2026-05-29 145658.png" alt="Ivy Reply Workflow"></button>
+            </div>
             <div class="tags"><span class="tag">Agentic AI</span><span class="tag">CRM</span><span class="tag">Workflow</span></div>
             <div class="links"><a href="https://github.com/Alebabo/ivy-sales-agent" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -486,6 +652,10 @@
             <h3>TalentFlow Advisor</h3>
             <p class="hackathon">Career & Talent Advisor</p>
             <p class="desc">Advisor prototype for talent discovery and career guidance, combining structured profiles with AI-assisted recommendations.</p>
+            <div class="project-gallery" aria-label="TalentFlow Advisor images">
+              <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Dashbiard.png" data-caption="TalentFlow Dashboard"><img src="pictures/talentflow/Dashbiard.png" alt="TalentFlow Dashboard"></button>
+              <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Screenshot 2026-06-15 011429.png" data-caption="TalentFlow Advisor Screenshot"><img src="pictures/talentflow/Screenshot 2026-06-15 011429.png" alt="TalentFlow Advisor Screenshot"></button>
+            </div>
             <div class="tags"><span class="tag">Talent</span><span class="tag">Recommendation</span><span class="tag">AI Advisor</span></div>
             <div class="links"><a href="https://github.com/Alebabo/talentflow-advisor" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
@@ -496,5 +666,78 @@
   <footer class="page">
     <span>Alessandro Bonanno · Munich · AI, Product and Information Systems</span>
   </footer>
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Project image preview">
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox-image" src="" alt="">
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Next image">&#8250;</button>
+    <div class="lightbox-caption"></div>
+  </div>
+  <script>
+    const galleryButtons = Array.from(document.querySelectorAll(".gallery-item"));
+    const lightbox = document.querySelector(".lightbox");
+    const lightboxImage = document.querySelector(".lightbox-image");
+    const lightboxCaption = document.querySelector(".lightbox-caption");
+    const closeButton = document.querySelector(".lightbox-close");
+    const prevButton = document.querySelector(".lightbox-prev");
+    const nextButton = document.querySelector(".lightbox-next");
+    const linkedInFrame = document.querySelector(".linkedin-frame");
+    const linkedInPlaceholder = document.querySelector(".linkedin-placeholder");
+    let activeGallery = [];
+    let activeIndex = 0;
+
+    if (linkedInFrame && linkedInFrame.dataset.linkedinEmbedSrc) {
+      linkedInFrame.src = linkedInFrame.dataset.linkedinEmbedSrc;
+      linkedInFrame.style.display = "block";
+      if (linkedInPlaceholder) linkedInPlaceholder.hidden = true;
+    }
+
+    function openLightbox(button) {
+      const galleryName = button.dataset.gallery;
+      activeGallery = galleryButtons.filter((item) => item.dataset.gallery === galleryName);
+      activeIndex = activeGallery.indexOf(button);
+      updateLightbox();
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      nextButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    function updateLightbox() {
+      const item = activeGallery[activeIndex];
+      if (!item) return;
+      const image = item.querySelector("img");
+      lightboxImage.src = item.dataset.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = item.dataset.caption || image.alt;
+    }
+
+    function moveLightbox(direction) {
+      if (!activeGallery.length) return;
+      activeIndex = (activeIndex + direction + activeGallery.length) % activeGallery.length;
+      updateLightbox();
+    }
+
+    galleryButtons.forEach((button) => {
+      button.addEventListener("click", () => openLightbox(button));
+    });
+    closeButton.addEventListener("click", closeLightbox);
+    prevButton.addEventListener("click", () => moveLightbox(-1));
+    nextButton.addEventListener("click", () => moveLightbox(1));
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (lightbox.getAttribute("aria-hidden") === "true") return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") moveLightbox(-1);
+      if (event.key === "ArrowRight") moveLightbox(1);
+    });
+  </script>
 </body>
 </html>
