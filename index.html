@@ -354,6 +354,16 @@
       bottom: auto;
       height: calc(142.86% + 52px);
     }
+    .linkedin-post-link {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+    .linkedin-post-link:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: -3px;
+    }
     .linkedin-carousel-nav {
       position: absolute;
       top: 50%;
@@ -654,15 +664,19 @@
         <div class="linkedin-posts" aria-label="LinkedIn posts">
           <article class="linkedin-post-card">
             <iframe class="linkedin-post-frame" title="Latest LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473253970463916032"></iframe>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_hackathon-ai-solar-ugcPost-7473253970463916032-bicv/" target="_blank" rel="noreferrer" aria-label="Open latest post on LinkedIn"></a>
           </article>
           <article class="linkedin-post-card">
             <iframe class="linkedin-post-frame" title="Previous LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463174175419994114"></iframe>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/posts/alessandro-bonanno-173995358_milanaiweek-aiagents-speechmatics-ugcPost-7463174175419994114-hfXo/" target="_blank" rel="noreferrer" aria-label="Open previous post on LinkedIn"></a>
           </article>
           <article class="linkedin-post-card hide-share-banner">
             <iframe class="linkedin-post-frame" title="Earlier LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7458597758732611585/" target="_blank" rel="noreferrer" aria-label="Open earlier post on LinkedIn"></a>
           </article>
           <article class="linkedin-post-card hide-share-banner">
             <iframe class="linkedin-post-frame" title="LinkedIn presentation post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7457493789935386624"></iframe>
+            <a class="linkedin-post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7457493789935386624/" target="_blank" rel="noreferrer" aria-label="Open presentation post on LinkedIn"></a>
           </article>
         </div>
         <button class="linkedin-carousel-nav linkedin-carousel-prev" type="button" aria-label="Previous LinkedIn post">&lt;</button>
