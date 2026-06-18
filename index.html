@@ -314,15 +314,26 @@
     .linkedin-section {
       padding-bottom: 56px;
     }
+    .linkedin-carousel {
+      position: relative;
+    }
     .linkedin-posts {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      display: flex;
       gap: 18px;
-      padding-bottom: 4px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 0 1px 4px;
+    }
+    .linkedin-posts::-webkit-scrollbar {
+      display: none;
     }
     .linkedin-post-card {
+      flex: 0 0 calc((100% - 36px) / 3);
       aspect-ratio: 3 / 5.25;
       position: relative;
+      scroll-snap-align: start;
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
@@ -343,6 +354,32 @@
       bottom: auto;
       height: calc(142.86% + 52px);
     }
+    .linkedin-carousel-nav {
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      transform: translateY(-50%);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: 0 5px 18px rgba(18, 28, 45, 0.14);
+      cursor: pointer;
+      font: 700 1.35rem/1 Calibri, "Segoe UI", sans-serif;
+    }
+    .linkedin-carousel-nav:hover:not(:disabled) {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .linkedin-carousel-nav:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+    .linkedin-carousel-prev { left: -20px; }
+    .linkedin-carousel-next { right: -20px; }
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -424,14 +461,22 @@
         align-items: start;
         flex-direction: column;
       }
-      .linkedin-posts { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+      .linkedin-post-card { flex-basis: calc((100% - 18px) / 2); }
+      .linkedin-carousel-prev { left: -12px; }
+      .linkedin-carousel-next { right: -12px; }
     }
 
     @media (max-width: 480px) {
       .hero-actions .btn { width: 100%; }
       .hero-media { min-height: 320px; }
       .grid { grid-template-columns: 1fr; }
-      .linkedin-posts { grid-template-columns: 1fr; }
+      .linkedin-post-card { flex-basis: 100%; }
+      .linkedin-carousel-nav {
+        width: 36px;
+        height: 36px;
+      }
+      .linkedin-carousel-prev { left: 8px; }
+      .linkedin-carousel-next { right: 8px; }
       .lightbox { padding: 12px; }
       .lightbox-image {
         max-width: 94vw;
@@ -605,16 +650,23 @@
         <h2 id="linkedin-title">LinkedIn</h2>
         <p><a href="https://www.linkedin.com/in/alessandro-bonanno-173995358/" target="_blank" rel="noreferrer">go to LinkedIn -&gt;</a></p>
       </div>
-      <div class="linkedin-posts" aria-label="LinkedIn posts">
-        <article class="linkedin-post-card">
-          <iframe class="linkedin-post-frame" title="Latest LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473253970463916032"></iframe>
-        </article>
-        <article class="linkedin-post-card">
-          <iframe class="linkedin-post-frame" title="Previous LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463174175419994114"></iframe>
-        </article>
-        <article class="linkedin-post-card hide-share-banner">
-          <iframe class="linkedin-post-frame" title="Earlier LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
-        </article>
+      <div class="linkedin-carousel">
+        <div class="linkedin-posts" aria-label="LinkedIn posts">
+          <article class="linkedin-post-card">
+            <iframe class="linkedin-post-frame" title="Latest LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473253970463916032"></iframe>
+          </article>
+          <article class="linkedin-post-card">
+            <iframe class="linkedin-post-frame" title="Previous LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7463174175419994114"></iframe>
+          </article>
+          <article class="linkedin-post-card hide-share-banner">
+            <iframe class="linkedin-post-frame" title="Earlier LinkedIn post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7458597758732611585"></iframe>
+          </article>
+          <article class="linkedin-post-card hide-share-banner">
+            <iframe class="linkedin-post-frame" title="LinkedIn presentation post" loading="lazy" scrolling="no" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7457493789935386624"></iframe>
+          </article>
+        </div>
+        <button class="linkedin-carousel-nav linkedin-carousel-prev" type="button" aria-label="Previous LinkedIn post">&lt;</button>
+        <button class="linkedin-carousel-nav linkedin-carousel-next" type="button" aria-label="Next LinkedIn post">&gt;</button>
       </div>
     </section>
 
@@ -781,6 +833,31 @@
         moveGallery(1);
       });
     });
+
+    const linkedinTrack = document.querySelector(".linkedin-posts");
+    const linkedinPrev = document.querySelector(".linkedin-carousel-prev");
+    const linkedinNext = document.querySelector(".linkedin-carousel-next");
+
+    if (linkedinTrack && linkedinPrev && linkedinNext) {
+      const updateLinkedinControls = () => {
+        const maxScroll = linkedinTrack.scrollWidth - linkedinTrack.clientWidth;
+        linkedinPrev.disabled = linkedinTrack.scrollLeft <= 2;
+        linkedinNext.disabled = linkedinTrack.scrollLeft >= maxScroll - 2;
+      };
+
+      const moveLinkedinCarousel = (direction) => {
+        const card = linkedinTrack.querySelector(".linkedin-post-card");
+        const gap = parseFloat(getComputedStyle(linkedinTrack).gap) || 0;
+        const step = card ? card.getBoundingClientRect().width + gap : linkedinTrack.clientWidth;
+        linkedinTrack.scrollBy({ left: direction * step, behavior: "smooth" });
+      };
+
+      linkedinPrev.addEventListener("click", () => moveLinkedinCarousel(-1));
+      linkedinNext.addEventListener("click", () => moveLinkedinCarousel(1));
+      linkedinTrack.addEventListener("scroll", updateLinkedinControls, { passive: true });
+      window.addEventListener("resize", updateLinkedinControls);
+      updateLinkedinControls();
+    }
 
     function openLightbox(button) {
       const galleryName = button.dataset.gallery;
