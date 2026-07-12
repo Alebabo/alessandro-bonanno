@@ -10,15 +10,18 @@
   <meta name="creator" content="Alessandro Bonanno">
   <meta name="publisher" content="Alessandro Bonanno">
   <meta name="application-name" content="Alessandro Bonanno Portfolio">
+  <meta name="apple-mobile-web-app-title" content="Alessandro Bonanno">
+  <meta http-equiv="content-language" content="en">
   <meta name="theme-color" content="#2459ff">
   <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="classification" content="AI product portfolio, AI agents, machine learning, hackathon projects">
   <meta name="subject" content="Alessandro Bonanno, AI product builder in Munich, AI agents, machine learning, product prototypes">
   <meta name="coverage" content="Munich, Bavaria, Germany">
   <meta name="rating" content="general">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="googlebot" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="geo.region" content="DE-BY">
   <meta name="geo.placename" content="Munich, Germany">
   <meta name="geo.position" content="48.137154;11.576124">
@@ -31,6 +34,9 @@
   <link rel="canonical" href="https://alessandro-bonanno.vercel.app/">
   <link rel="alternate" type="text/plain" title="LLM-readable portfolio summary" href="/llms.txt">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preconnect" href="https://www.linkedin.com">
+  <link rel="preconnect" href="https://static.licdn.com">
+  <link rel="preload" as="image" href="/pictures/StealthDetection_Final/pb.jpeg" fetchpriority="high">
   <link rel="me" href="https://github.com/Alebabo">
   <link rel="me" href="https://www.linkedin.com/in/alessandro-bonanno-173995358/">
   <link rel="author" href="mailto:ale.bonanno2006@gmail.com">
@@ -165,6 +171,8 @@
     }
     .hero-media {
       align-self: stretch;
+      width: 100%;
+      margin: 0;
       min-height: 360px;
       max-height: 520px;
       border-radius: var(--radius);
@@ -567,26 +575,86 @@
       .hero {
         min-height: auto;
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding-top: 34px;
+        gap: 22px;
+        padding: 28px 0 30px;
       }
+      h1 { font-size: clamp(2.15rem, 12vw, 3.7rem); }
+      .lead {
+        margin-top: 18px;
+        font-size: 1.03rem;
+      }
+      .hero-actions { margin-top: 22px; }
       .hero-media {
-        min-height: 360px;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 5;
         order: -1;
       }
       .section-head {
         align-items: start;
         flex-direction: column;
+        gap: 10px;
+        padding: 18px 0 18px;
       }
+      .grid {
+        gap: 16px;
+        padding-bottom: 54px;
+      }
+      .gallery-item { aspect-ratio: 16 / 11; }
       .linkedin-post-card { flex-basis: calc((100% - 18px) / 2); }
       .linkedin-carousel-prev { left: -12px; }
       .linkedin-carousel-next { right: -12px; }
     }
 
     @media (max-width: 480px) {
+      .page { width: calc(100% - 22px); }
+      .hero {
+        gap: 18px;
+        padding-top: 18px;
+      }
+      h1 {
+        font-size: clamp(2rem, 13vw, 3rem);
+        line-height: 1.02;
+      }
+      .lead {
+        margin-top: 15px;
+        font-size: 0.98rem;
+      }
+      .btn {
+        min-height: 44px;
+        padding: 10px 13px;
+      }
       .hero-actions .btn { width: 100%; }
-      .hero-media { min-height: 320px; }
-      .grid { grid-template-columns: 1fr; }
+      .hero-media { aspect-ratio: 1 / 1.18; }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding-bottom: 44px;
+      }
+      .card-body {
+        padding: 15px;
+        gap: 10px;
+      }
+      .card h3 { font-size: 1.08rem; }
+      .desc { font-size: 0.88rem; }
+      .tag {
+        font-size: 0.7rem;
+        padding: 3px 7px;
+      }
+      .gallery-item { aspect-ratio: 16 / 10.5; }
+      .winner-prize-pill,
+      .finalist-pill {
+        top: 8px;
+        right: 8px;
+        max-width: calc(100% - 16px);
+        padding: 5px 8px;
+        font-size: 0.68rem;
+      }
+      .gallery-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 1.28rem;
+      }
       .linkedin-post-card { flex-basis: 100%; }
       .linkedin-carousel-nav {
         width: 36px;
@@ -656,6 +724,9 @@
         "email": "ale.bonanno2006@gmail.com",
         "url": "https://alessandro-bonanno.vercel.app/",
         "image": "https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/pb.jpeg",
+        "mainEntityOfPage": {
+          "@id": "https://alessandro-bonanno.vercel.app/#profile"
+        },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Munich",
@@ -870,7 +941,7 @@
         </div>
       </div>
       <figure class="hero-media">
-        <img src="pictures/StealthDetection_Final/pb.jpeg" alt="Alessandro Bonanno presenting at the Technical University of Munich">
+        <img src="pictures/StealthDetection_Final/pb.jpeg" alt="Alessandro Bonanno presenting at the Technical University of Munich" width="697" height="930" decoding="async" fetchpriority="high">
       </figure>
     </section>
 

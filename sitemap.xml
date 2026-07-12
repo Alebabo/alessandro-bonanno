@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alessandro-bonanno.vercel.app/</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/pb.jpeg</image:loc>
+      <image:title>Alessandro Bonanno presenting at TUM</image:title>
+      <image:caption>Alessandro Bonanno presenting an AI product at the Technical University of Munich.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/Folie1.PNG</image:loc>
+      <image:title>StealthDetection digital twins pitch deck cover</image:title>
+      <image:caption>Digital Twins of Solar Plants pitch deck cover for the StealthDetection machine learning project.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/traqr/Screenshot%202026-05-05%20000846.png</image:loc>
+      <image:title>traqr.ai founder signals thumbnail</image:title>
+      <image:caption>Founder signal interface for the traqr.ai venture capital intelligence project.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/SolarPingu/Screenshot%202026-05-29%20150002.png</image:loc>
+      <image:title>SolarPingu app screenshot</image:title>
+      <image:caption>SolarPingu app screenshot for a multi-agent solar sales workflow.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/talentflow/Screenshot%202026-06-15%20011429.png</image:loc>
+      <image:title>TalentFlow Advisor screenshot</image:title>
+      <image:caption>TalentFlow Advisor screenshot for an AI talent matching prototype.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://alessandro-bonanno.vercel.app/llms.txt</loc>
