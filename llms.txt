@@ -8,6 +8,24 @@ Last updated: 2026-07-12
 ## Summary
 Alessandro Bonanno is a Munich-based AI product builder and Information Systems student at the Technical University of Munich. He builds fast AI prototypes, AI agents, machine-learning workflows, and hackathon products with a focus on clear technical delivery and AI product presentation.
 
+## Entity facts
+- Name: Alessandro Bonanno
+- Location: Munich, Bavaria, Germany
+- Role: AI Product Builder
+- Education: Information Systems student at the Technical University of Munich
+- Affiliation: TMA IT Solutions
+- Online identity: GitHub Alebabo; LinkedIn Alessandro Bonanno
+- Languages: German, Italian, English
+- Awards and proof points: Deutschlandstipendium; 1000 EUR cash prize at the TUM.ai x Invertix.ai Energy Hack; finalist projects in AI, venture capital, solar sales, and talent advisory hackathon contexts.
+
+## Skills and topics
+- AI agents and agentic AI
+- Machine learning and anomaly detection
+- Multi-agent orchestration
+- LLM applications and prompt engineering
+- AI product management and presentation
+- Sales intelligence, voice AI, computer vision, and automation workflows
+
 ## Relevant projects
 - StealthDetection: Winner project with a 1000 EUR cash prize at the TUM.ai x Invertix.ai Energy Hack; machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface. LinkedIn proof: https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/
 - traqr.ai: Finalist project; VC signal collection tool combining Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface early traction signals.
