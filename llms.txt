@@ -9,7 +9,7 @@ Last updated: 2026-07-12
 Alessandro Bonanno is a Munich-based AI product builder and Information Systems student at the Technical University of Munich. He builds fast AI prototypes, AI agents, machine-learning workflows, and hackathon products with a focus on clear technical delivery and AI product presentation.
 
 ## Relevant projects
-- StealthDetection: Winner project at the TUM.ai x Invertix.ai Energy Hack; machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface.
+- StealthDetection: Winner project with a 1000 EUR cash prize at the TUM.ai x Invertix.ai Energy Hack; machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface. LinkedIn proof: https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/
 - traqr.ai: Finalist project; VC signal collection tool combining Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface early traction signals.
 - SolarPingu: Finalist project; autonomous solar sales agent system using Featherless AI and Qwen vision models for lead discovery, roof evaluation, qualification, and follow-up routing.
 - NUMI: AI sales call intelligence product using ElevenLabs for call capture, transcription, behavior scoring, and CRM-ready feedback.

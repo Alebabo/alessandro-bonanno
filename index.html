@@ -245,6 +245,15 @@
       background: var(--gold-soft);
       color: #7a4b0b;
     }
+    .award-note a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .award-note a:hover,
+    .award-note a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
     .award-note.silver {
       border: 1px solid rgba(154, 163, 178, 0.5);
       background: var(--silver-soft);
@@ -301,8 +310,7 @@
     .gallery-shell {
       position: relative;
     }
-    .card.project-winner .gallery-shell::after {
-      content: "🏆 Winner";
+    .winner-prize-pill {
       position: absolute;
       top: 10px;
       right: 10px;
@@ -315,8 +323,14 @@
       font-size: 0.76rem;
       font-weight: 900;
       line-height: 1;
+      text-decoration: none;
       box-shadow: 0 8px 18px rgba(18, 28, 45, 0.13);
-      pointer-events: none;
+    }
+    .winner-prize-pill:hover,
+    .winner-prize-pill:focus-visible {
+      color: #5f3907;
+      outline: 2px solid rgba(183, 121, 31, 0.42);
+      outline-offset: 2px;
     }
     .gallery-nav {
       position: absolute;
@@ -650,7 +664,8 @@
             "name": "StealthDetection",
             "description": "Machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface.",
             "keywords": "machine learning, anomaly detection, energy theft, smart meter, AI, hackathon winner",
-            "award": "Winner - TUM.ai x Invertix.ai Energy Hack"
+            "award": "1000 EUR cash prize - TUM.ai x Invertix.ai Energy Hack",
+            "discussionUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/"
           },
           {
             "@type": "CreativeWork",
@@ -763,18 +778,18 @@
       <div class="grid">
         <article class="card project-winner" aria-label="StealthDetection, winner project">
           <div class="project-gallery" aria-label="StealthDetection images">
-            <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Dashboard.png" data-caption="StealthDetection Dashboard"><img src="pictures/StealthDetection_Final/Dashboard.png" alt="StealthDetection Dashboard"></button>
+            <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie1.PNG" data-caption="Digital Twins of Solar Plants Pitch Slide"><img src="pictures/StealthDetection_Final/Folie1.PNG" alt="Digital Twins of Solar Plants pitch deck cover slide"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/ale.jpeg" data-caption="StealthDetection Presentation"><img src="pictures/StealthDetection_Final/ale.jpeg" alt="Alessandro presenting StealthDetection"></button>
+            <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Dashboard.png" data-caption="StealthDetection Dashboard"><img src="pictures/StealthDetection_Final/Dashboard.png" alt="StealthDetection Dashboard"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/accuracy.PNG" data-caption="StealthDetection Accuracy"><img src="pictures/StealthDetection_Final/accuracy.PNG" alt="StealthDetection Accuracy"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/connectors.png" data-caption="StealthDetection Connectors"><img src="pictures/StealthDetection_Final/connectors.png" alt="StealthDetection Connectors"></button>
-            <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie1.PNG" data-caption="StealthDetection Pitch Slide"><img src="pictures/StealthDetection_Final/Folie1.PNG" alt="StealthDetection Pitch Slide"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie4.PNG" data-caption="StealthDetection Model Slide"><img src="pictures/StealthDetection_Final/Folie4.PNG" alt="StealthDetection Model Slide"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Folie8.PNG" data-caption="StealthDetection Results Slide"><img src="pictures/StealthDetection_Final/Folie8.PNG" alt="StealthDetection Results Slide"></button>
           </div>
           <div class="card-body">
             <h3>StealthDetection</h3>
             <p class="hackathon">TUM.ai × Invertix.ai Energy Hack</p>
-            <p class="award-note gold">Winner project</p>
+            <p class="award-note gold"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/" target="_blank" rel="noreferrer">1000€ cash prize</a></p>
             <p class="desc">Machine learning model for energy-theft detection in smart-meter data, combining anomaly scoring, connector-level signals, and an operator interface for faster investigation.</p>
             <div class="tags"><span class="tag">AI</span><span class="tag">Energy</span><span class="tag">Python</span><span class="tag">Anomaly Detection</span></div>
             <div class="links"><a href="https://github.com/NickGitHubStart/Powerrangers" target="_blank" rel="noreferrer">GitHub</a></div>
@@ -891,6 +906,17 @@
       shell.className = "gallery-shell";
       gallery.parentNode.insertBefore(shell, gallery);
       shell.appendChild(gallery);
+
+      if (gallery.closest(".project-winner")) {
+        const prizeLink = document.createElement("a");
+        prizeLink.className = "winner-prize-pill";
+        prizeLink.href = "https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/";
+        prizeLink.target = "_blank";
+        prizeLink.rel = "noreferrer";
+        prizeLink.textContent = "🏆 1000€ cash prize";
+        prizeLink.setAttribute("aria-label", "Open LinkedIn post about the 1000 euro cash prize");
+        shell.appendChild(prizeLink);
+      }
 
       const prev = document.createElement("button");
       prev.className = "gallery-nav prev";
