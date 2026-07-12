@@ -332,6 +332,22 @@
       outline: 2px solid rgba(183, 121, 31, 0.42);
       outline-offset: 2px;
     }
+    .finalist-pill {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3;
+      padding: 6px 10px;
+      border: 1px solid rgba(81, 89, 103, 0.22);
+      border-radius: 999px;
+      background: rgba(243, 245, 248, 0.94);
+      color: #515967;
+      font-size: 0.76rem;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(18, 28, 45, 0.13);
+      pointer-events: none;
+    }
     .gallery-nav {
       position: absolute;
       top: 50%;
@@ -702,7 +718,8 @@
             "position": 6,
             "name": "TalentFlow Advisor",
             "description": "Career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.",
-            "keywords": "talent matching, AI advisor, metafinanz, Allianz, recommendations"
+            "keywords": "talent matching, AI advisor, metafinanz, Allianz, recommendations, hackathon finalist",
+            "award": "Finalist project"
           }
         ]
       }
@@ -798,11 +815,11 @@
 
         <article class="card project-finalist" aria-label="traqr.ai, finalist project">
           <div class="project-gallery" aria-label="traqr.ai images">
-            <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/titelbild.png" data-caption="traqr.ai Cover Image"><img src="pictures/traqr/titelbild.png" alt="traqr.ai Cover Image"></button>
+            <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-05 000846.png" data-caption="traqr.ai Founder Signals"><img src="pictures/traqr/Screenshot 2026-05-05 000846.png" alt="traqr.ai Founder Signals"></button>
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/ale.jpeg" data-caption="traqr.ai Presentation"><img src="pictures/traqr/ale.jpeg" alt="Alessandro presenting traqr.ai"></button>
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-29 143044.png" data-caption="traqr.ai Interface"><img src="pictures/traqr/Screenshot 2026-05-29 143044.png" alt="traqr.ai Interface"></button>
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-05 000732.png" data-caption="traqr.ai Network View"><img src="pictures/traqr/Screenshot 2026-05-05 000732.png" alt="traqr.ai Network View"></button>
-            <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/Screenshot 2026-05-05 000846.png" data-caption="traqr.ai Founder Signals"><img src="pictures/traqr/Screenshot 2026-05-05 000846.png" alt="traqr.ai Founder Signals"></button>
+            <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/titelbild.png" data-caption="traqr.ai Cover Image"><img src="pictures/traqr/titelbild.png" alt="traqr.ai Cover Image"></button>
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/example.png" data-caption="traqr.ai Example"><img src="pictures/traqr/example.png" alt="traqr.ai Example"></button>
           </div>
           <div class="card-body">
@@ -817,10 +834,10 @@
 
         <article class="card project-finalist" aria-label="SolarPingu, finalist project">
           <div class="project-gallery" aria-label="SolarPingu images">
-            <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/titelbild.png" data-caption="SolarPingu Cover Image"><img src="pictures/SolarPingu/titelbild.png" alt="SolarPingu Cover Image"></button>
+            <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" data-caption="SolarPingu App Screenshot"><img src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" alt="SolarPingu App Screenshot"></button>
             <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/ale.jpeg" data-caption="SolarPingu Presentation"><img src="pictures/SolarPingu/ale.jpeg" alt="Alessandro presenting SolarPingu"></button>
             <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/Landingpage.png" data-caption="SolarPingu Landingpage"><img src="pictures/SolarPingu/Landingpage.png" alt="SolarPingu Landingpage"></button>
-            <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" data-caption="SolarPingu App Screenshot"><img src="pictures/SolarPingu/Screenshot 2026-05-29 150002.png" alt="SolarPingu App Screenshot"></button>
+            <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/titelbild.png" data-caption="SolarPingu Cover Image"><img src="pictures/SolarPingu/titelbild.png" alt="SolarPingu Cover Image"></button>
             <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/agent_orchestration.png" data-caption="SolarPingu Agent Orchestration"><img src="pictures/SolarPingu/agent_orchestration.png" alt="SolarPingu Agent Orchestration"></button>
           </div>
           <div class="card-body">
@@ -863,15 +880,16 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card project-finalist" aria-label="TalentFlow Advisor, finalist project">
           <div class="project-gallery" aria-label="TalentFlow Advisor images">
-            <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Dashbiard.png" data-caption="TalentFlow Dashboard"><img src="pictures/talentflow/Dashbiard.png" alt="TalentFlow Dashboard"></button>
-            <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/ale.jpeg" data-caption="TalentFlow Advisor Presentation"><img src="pictures/talentflow/ale.jpeg" alt="Alessandro presenting TalentFlow Advisor"></button>
             <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Screenshot 2026-06-15 011429.png" data-caption="TalentFlow Advisor Screenshot"><img src="pictures/talentflow/Screenshot 2026-06-15 011429.png" alt="TalentFlow Advisor Screenshot"></button>
+            <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/ale.jpeg" data-caption="TalentFlow Advisor Presentation"><img src="pictures/talentflow/ale.jpeg" alt="Alessandro presenting TalentFlow Advisor"></button>
+            <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Dashbiard.png" data-caption="TalentFlow Dashboard"><img src="pictures/talentflow/Dashbiard.png" alt="TalentFlow Dashboard"></button>
           </div>
           <div class="card-body">
             <h3>TalentFlow Advisor</h3>
             <p class="hackathon">Career & Talent Advisor</p>
+            <p class="award-note silver">Finalist project</p>
             <p class="desc">Career and talent advisor prototype built for metafinanz, an Allianz company, turning structured profiles into AI-assisted discovery, matching, and recommendation flows.</p>
             <div class="tags"><span class="tag">Talent</span><span class="tag">Recommendation</span><span class="tag">AI Advisor</span></div>
             <div class="links"><a href="https://github.com/Alebabo/talentflow-advisor" target="_blank" rel="noreferrer">GitHub</a></div>
@@ -913,9 +931,16 @@
         prizeLink.href = "https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/";
         prizeLink.target = "_blank";
         prizeLink.rel = "noreferrer";
-        prizeLink.textContent = "🏆 1000€ cash prize";
-        prizeLink.setAttribute("aria-label", "Open LinkedIn post about the 1000 euro cash prize");
+        prizeLink.textContent = "🏆 Winner";
+        prizeLink.setAttribute("aria-label", "Open LinkedIn post about the StealthDetection winner prize");
         shell.appendChild(prizeLink);
+      }
+
+      if (gallery.closest(".project-finalist")) {
+        const finalistPill = document.createElement("span");
+        finalistPill.className = "finalist-pill";
+        finalistPill.textContent = "Finalist";
+        shell.appendChild(finalistPill);
       }
 
       const prev = document.createElement("button");

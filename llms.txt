@@ -14,7 +14,7 @@ Alessandro Bonanno is a Munich-based AI product builder and Information Systems 
 - SolarPingu: Finalist project; autonomous solar sales agent system using Featherless AI and Qwen vision models for lead discovery, roof evaluation, qualification, and follow-up routing.
 - NUMI: AI sales call intelligence product using ElevenLabs for call capture, transcription, behavior scoring, and CRM-ready feedback.
 - Ivy Reply: Agentic sales workflow assistant built for getivy, today Augustus, a Peter Thiel-backed company.
-- TalentFlow Advisor: Career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.
+- TalentFlow Advisor: Finalist project; career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.
 
 ## Links
 - Portfolio: https://alessandro-bonanno.vercel.app/
