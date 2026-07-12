@@ -27,6 +27,11 @@
       <image:caption>SolarPingu app screenshot for a multi-agent solar sales workflow.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/Ivyreply/ivy-reply-deckblatt.png</image:loc>
+      <image:title>Ivy Reply hackathon project cover</image:title>
+      <image:caption>Deck cover for Ivy Reply, an agentic AI sales workflow assistant built for getivy.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/talentflow/metafinanz-x-talentflow-deckblatt.png</image:loc>
       <image:title>metafinanz x TalentFlow cover</image:title>
       <image:caption>Deck cover for TalentFlow Advisor, a finalist AI talent matching prototype built for metafinanz.</image:caption>
