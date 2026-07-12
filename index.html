@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alessandro Bonanno - AI, Product, Hackathon Projects</title>
-  <meta name="description" content="Personal portfolio page by Alessandro Bonanno: TUM information systems, TMA IT Solutions, AI agents, product management, and hackathon projects.">
-  <meta name="keywords" content="Alessandro Bonanno, TUM, Information Systems, AI Agents, Agentic AI, AI Product Builder, Product Management, Machine Learning, Multi-Agent Systems, LLM Applications, Prompt Engineering, AI Automation, TMA IT Solutions, Deutschlandstipendium, Hackathon, StealthDetection, NUMI, traqr, SolarPingu, Ivy Reply, TalentFlow Advisor">
+  <title>Alessandro Bonanno - AI Agents, Machine Learning & Award-Winning Hackathon Projects</title>
+  <meta name="description" content="Alessandro Bonanno builds AI agents, machine-learning products, and award-winning hackathon projects in Munich, including StealthDetection, SolarPingu, traqr.ai, NUMI, Ivy Reply, and TalentFlow Advisor.">
+  <meta name="keywords" content="Alessandro Bonanno, Munich AI builder, TUM, Information Systems, AI Agents, Agentic AI, AI Product Builder, Product Management, Machine Learning, Multi-Agent Systems, LLM Applications, Prompt Engineering, AI Automation, TMA IT Solutions, Deutschlandstipendium, Hackathon Winner, Hackathon Finalist, StealthDetection, NUMI, traqr, SolarPingu, Ivy Reply, TalentFlow Advisor">
   <meta name="author" content="Alessandro Bonanno">
   <meta name="creator" content="Alessandro Bonanno">
   <meta name="publisher" content="Alessandro Bonanno">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="googlebot" content="index, follow, max-image-preview:large">
-  <meta name="ai-summary" content="Alessandro Bonanno builds AI agents, machine-learning prototypes, sales intelligence products, multi-agent solar sales workflows, and hackathon projects around product, automation, and clear AI product presentation.">
-  <meta name="ai-topics" content="AI agents, agentic AI, machine learning, multi-agent systems, LLM applications, AI product management, sales automation, AI presentations, hackathon prototypes">
-  <meta name="ai-capabilities" content="AI product prototyping, LLM implementation, prompt engineering, machine learning workflows, multi-agent automation, product storytelling, technical presentations">
+  <meta name="geo.region" content="DE-BY">
+  <meta name="geo.placename" content="Munich, Germany">
+  <meta name="ICBM" content="48.137154, 11.576124">
+  <meta name="ai-summary" content="Alessandro Bonanno is a Munich-based AI product builder focused on AI agents, machine-learning prototypes, award-winning hackathon projects, automation, and clear AI product presentation.">
+  <meta name="ai-topics" content="AI agents, agentic AI, machine learning, multi-agent systems, LLM applications, AI product management, sales automation, AI presentations, hackathon winners, hackathon finalists">
+  <meta name="ai-capabilities" content="AI product prototyping, LLM implementation, prompt engineering, machine learning workflows, multi-agent automation, product storytelling, technical presentations, hackathon execution">
   <meta name="llms-txt" content="https://alessandro-bonanno.vercel.app/llms.txt">
   <link rel="canonical" href="https://alessandro-bonanno.vercel.app/">
   <link rel="alternate" type="text/plain" title="LLM-readable portfolio summary" href="/llms.txt">
@@ -21,15 +24,15 @@
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://alessandro-bonanno.vercel.app/">
   <meta property="og:site_name" content="Alessandro Bonanno Portfolio">
-  <meta property="og:title" content="Alessandro Bonanno">
-  <meta property="og:description" content="AI-focused Information Systems student at TUM, founder of TMA IT Solutions, and builder of hackathon projects.">
+  <meta property="og:title" content="Alessandro Bonanno - AI Agents & Award-Winning Hackathon Projects">
+  <meta property="og:description" content="Munich-based AI builder focused on AI agents, machine learning, product prototypes, and award-winning hackathon projects.">
   <meta property="og:image" content="https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/pb.jpeg">
   <meta property="og:image:alt" content="Alessandro Bonanno presenting an AI product at the Technical University of Munich">
   <meta property="profile:first_name" content="Alessandro">
   <meta property="profile:last_name" content="Bonanno">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alessandro Bonanno">
-  <meta name="twitter:description" content="AI, product, and hackathon portfolio.">
+  <meta name="twitter:title" content="Alessandro Bonanno - AI Agents & Hackathon Projects">
+  <meta name="twitter:description" content="AI agents, machine learning, product prototypes, and award-winning hackathon work.">
   <meta name="twitter:image" content="https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/pb.jpeg">
   <style>
     :root {
@@ -43,6 +46,9 @@
       --accent-dark: #173fbd;
       --green: #0f8f61;
       --gold: #b7791f;
+      --gold-soft: #fff2c7;
+      --silver: #9aa3b2;
+      --silver-soft: #f3f5f8;
       --radius: 12px;
       --shadow: 0 18px 45px rgba(18, 28, 45, 0.09);
     }
@@ -193,6 +199,22 @@
       border-color: rgba(36, 89, 255, 0.5);
       box-shadow: var(--shadow);
     }
+    .card.project-winner {
+      border: 2px solid var(--gold);
+      box-shadow: 0 10px 28px rgba(183, 121, 31, 0.16);
+    }
+    .card.project-finalist {
+      border: 2px solid var(--silver);
+      box-shadow: 0 10px 28px rgba(102, 112, 133, 0.12);
+    }
+    .card.project-winner:hover {
+      border-color: #946018;
+      box-shadow: 0 18px 45px rgba(183, 121, 31, 0.22);
+    }
+    .card.project-finalist:hover {
+      border-color: #7b8492;
+      box-shadow: 0 18px 45px rgba(102, 112, 133, 0.16);
+    }
     .card-body {
       padding: 18px;
       display: grid;
@@ -208,6 +230,25 @@
       color: var(--muted);
       font-size: 0.82rem;
       font-weight: 700;
+    }
+    .award-note {
+      width: fit-content;
+      margin: -3px 0 0;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .award-note.gold {
+      border: 1px solid rgba(183, 121, 31, 0.34);
+      background: var(--gold-soft);
+      color: #7a4b0b;
+    }
+    .award-note.silver {
+      border: 1px solid rgba(154, 163, 178, 0.5);
+      background: var(--silver-soft);
+      color: #515967;
     }
     .desc {
       margin: 0;
@@ -259,6 +300,23 @@
     }
     .gallery-shell {
       position: relative;
+    }
+    .card.project-winner .gallery-shell::after {
+      content: "🏆 Winner";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3;
+      padding: 6px 10px;
+      border: 1px solid rgba(122, 75, 11, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 242, 199, 0.94);
+      color: #7a4b0b;
+      font-size: 0.76rem;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(18, 28, 45, 0.13);
+      pointer-events: none;
     }
     .gallery-nav {
       position: absolute;
@@ -505,15 +563,17 @@
         "@id": "https://alessandro-bonanno.vercel.app/#website",
         "url": "https://alessandro-bonanno.vercel.app/",
         "name": "Alessandro Bonanno Portfolio",
-        "description": "Portfolio of Alessandro Bonanno covering AI agents, machine learning, product work, and hackathon projects.",
-        "inLanguage": "en"
+        "description": "Portfolio of Alessandro Bonanno covering AI agents, machine learning, product work, award-winning hackathon projects, and AI product presentations.",
+        "inLanguage": "en",
+        "dateModified": "2026-07-12"
       },
       {
         "@type": "ProfilePage",
         "@id": "https://alessandro-bonanno.vercel.app/#profile",
         "url": "https://alessandro-bonanno.vercel.app/",
         "name": "Alessandro Bonanno - AI Agents and Product Portfolio",
-        "description": "AI-agent-readable profile page for Alessandro Bonanno, focused on agentic AI, machine learning, automation, and AI product presentation.",
+        "description": "AI-agent-readable profile page for Alessandro Bonanno, focused on agentic AI, machine learning, automation, award-winning hackathon work, and AI product presentation.",
+        "dateModified": "2026-07-12",
         "isPartOf": {
           "@id": "https://alessandro-bonanno.vercel.app/#website"
         },
@@ -530,6 +590,15 @@
         "email": "ale.bonanno2006@gmail.com",
         "url": "https://alessandro-bonanno.vercel.app/",
         "image": "https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/pb.jpeg",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Munich, Germany",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 48.137154,
+            "longitude": 11.576124
+          }
+        },
         "sameAs": [
           "https://github.com/Alebabo",
           "https://www.linkedin.com/in/alessandro-bonanno-173995358/"
@@ -580,21 +649,24 @@
             "position": 1,
             "name": "StealthDetection",
             "description": "Machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface.",
-            "keywords": "machine learning, anomaly detection, energy theft, smart meter, AI"
+            "keywords": "machine learning, anomaly detection, energy theft, smart meter, AI, hackathon winner",
+            "award": "Winner - TUM.ai x Invertix.ai Energy Hack"
           },
           {
             "@type": "CreativeWork",
             "position": 2,
             "name": "traqr.ai",
             "description": "VC signal collection tool combining Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface traction signals.",
-            "keywords": "AI agents, venture capital, signal collection, founder networks, traction"
+            "keywords": "AI agents, venture capital, signal collection, founder networks, traction, hackathon finalist",
+            "award": "Finalist project"
           },
           {
             "@type": "CreativeWork",
             "position": 3,
             "name": "SolarPingu",
             "description": "Autonomous solar sales agent system using Featherless AI and Qwen vision models for lead discovery, roof evaluation, qualification, and follow-up routing.",
-            "keywords": "multi-agent systems, Featherless AI, Qwen vision model, solar sales, automation"
+            "keywords": "multi-agent systems, Featherless AI, Qwen vision model, solar sales, automation, hackathon finalist",
+            "award": "Finalist project"
           },
           {
             "@type": "CreativeWork",
@@ -615,7 +687,8 @@
             "position": 6,
             "name": "TalentFlow Advisor",
             "description": "Career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.",
-            "keywords": "talent matching, AI advisor, metafinanz, Allianz, recommendations"
+            "keywords": "talent matching, AI advisor, metafinanz, Allianz, recommendations, finalist project",
+            "award": "Finalist project"
           }
         ]
       }
@@ -689,7 +762,7 @@
         <h2 id="projects-title">Hackathon Projects</h2>
       </div>
       <div class="grid">
-        <article class="card">
+        <article class="card project-winner" aria-label="StealthDetection, winner project">
           <div class="project-gallery" aria-label="StealthDetection images">
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/Dashboard.png" data-caption="StealthDetection Dashboard"><img src="pictures/StealthDetection_Final/Dashboard.png" alt="StealthDetection Dashboard"></button>
             <button class="gallery-item" type="button" data-gallery="StealthDetection" data-src="pictures/StealthDetection_Final/ale.jpeg" data-caption="StealthDetection Presentation"><img src="pictures/StealthDetection_Final/ale.jpeg" alt="Alessandro presenting StealthDetection"></button>
@@ -702,13 +775,14 @@
           <div class="card-body">
             <h3>StealthDetection</h3>
             <p class="hackathon">TUM.ai × Invertix.ai Energy Hack</p>
+            <p class="award-note gold">Winner project</p>
             <p class="desc">Machine learning model for energy-theft detection in smart-meter data, combining anomaly scoring, connector-level signals, and an operator interface for faster investigation.</p>
             <div class="tags"><span class="tag">AI</span><span class="tag">Energy</span><span class="tag">Python</span><span class="tag">Anomaly Detection</span></div>
             <div class="links"><a href="https://github.com/NickGitHubStart/Powerrangers" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card project-finalist" aria-label="traqr.ai, finalist project">
           <div class="project-gallery" aria-label="traqr.ai images">
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/titelbild.png" data-caption="traqr.ai Cover Image"><img src="pictures/traqr/titelbild.png" alt="traqr.ai Cover Image"></button>
             <button class="gallery-item" type="button" data-gallery="traqr.ai" data-src="pictures/traqr/ale.jpeg" data-caption="traqr.ai Presentation"><img src="pictures/traqr/ale.jpeg" alt="Alessandro presenting traqr.ai"></button>
@@ -720,13 +794,14 @@
           <div class="card-body">
             <h3>traqr.ai</h3>
             <p class="hackathon">TUM.ai E-Lab × Project A VC</p>
+            <p class="award-note silver">Finalist project</p>
             <p class="desc">VC signal collection tool that combines Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface early traction signals.</p>
             <div class="tags"><span class="tag">AI Agent</span><span class="tag">VC</span><span class="tag">Network Intelligence</span></div>
             <div class="links"><a href="https://github.com/Alebabo/anytrace" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
         </article>
 
-        <article class="card">
+        <article class="card project-finalist" aria-label="SolarPingu, finalist project">
           <div class="project-gallery" aria-label="SolarPingu images">
             <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/titelbild.png" data-caption="SolarPingu Cover Image"><img src="pictures/SolarPingu/titelbild.png" alt="SolarPingu Cover Image"></button>
             <button class="gallery-item" type="button" data-gallery="SolarPingu" data-src="pictures/SolarPingu/ale.jpeg" data-caption="SolarPingu Presentation"><img src="pictures/SolarPingu/ale.jpeg" alt="Alessandro presenting SolarPingu"></button>
@@ -737,6 +812,7 @@
           <div class="card-body">
             <h3>SolarPingu</h3>
             <p class="hackathon">lablab.ai Multi-Agent Solar Sales</p>
+            <p class="award-note silver">Finalist project</p>
             <p class="desc">Autonomous solar sales agent system using Featherless AI and Qwen vision models to find leads, evaluate roof and profitability potential, qualify prospects, and route follow-ups.</p>
             <div class="tags"><span class="tag">Multi-Agent</span><span class="tag">Sales</span><span class="tag">Automation</span></div>
             <div class="links"><a href="https://github.com/Alebabo/lablab_multiagent_solar_sales" target="_blank" rel="noreferrer">GitHub</a></div>
@@ -773,7 +849,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card project-finalist" aria-label="TalentFlow Advisor, finalist project">
           <div class="project-gallery" aria-label="TalentFlow Advisor images">
             <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/Dashbiard.png" data-caption="TalentFlow Dashboard"><img src="pictures/talentflow/Dashbiard.png" alt="TalentFlow Dashboard"></button>
             <button class="gallery-item" type="button" data-gallery="TalentFlow Advisor" data-src="pictures/talentflow/ale.jpeg" data-caption="TalentFlow Advisor Presentation"><img src="pictures/talentflow/ale.jpeg" alt="Alessandro presenting TalentFlow Advisor"></button>
@@ -782,6 +858,7 @@
           <div class="card-body">
             <h3>TalentFlow Advisor</h3>
             <p class="hackathon">Career & Talent Advisor</p>
+            <p class="award-note silver">Finalist project</p>
             <p class="desc">Career and talent advisor prototype built for metafinanz, an Allianz company, turning structured profiles into AI-assisted discovery, matching, and recommendation flows.</p>
             <div class="tags"><span class="tag">Talent</span><span class="tag">Recommendation</span><span class="tag">AI Advisor</span></div>
             <div class="links"><a href="https://github.com/Alebabo/talentflow-advisor" target="_blank" rel="noreferrer">GitHub</a></div>
