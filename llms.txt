@@ -2,37 +2,23 @@
 
 URL: https://alessandro-bonanno.vercel.app/
 Language: en
-Primary topics: AI agents, agentic AI, machine learning, multi-agent systems, LLM applications, AI product management, AI automation, product presentation, award-winning hackathon projects, Munich AI builder
-Last updated: 2026-07-12
+Last updated: 2026-11-12
 
 ## Summary
-Alessandro Bonanno is a Munich-based AI product builder and Information Systems student at the Technical University of Munich. He builds fast AI prototypes, AI agents, machine-learning workflows, and hackathon products with a focus on clear technical delivery and AI product presentation.
+Alessandro Bonanno is a Munich-based AI product builder and TUM Information Systems student. He works across conversational AI, product discovery, software engineering and automation.
 
-## Entity facts
-- Name: Alessandro Bonanno
-- Location: Munich, Bavaria, Germany
-- Role: AI Product Builder
-- Education: Information Systems student at the Technical University of Munich
-- Affiliation: TMA IT Solutions
-- Online identity: GitHub Alebabo; LinkedIn Alessandro Bonanno
-- Languages: German, Italian, English
-- Awards and proof points: Deutschlandstipendium; 1000 EUR cash prize at the TUM.ai x Invertix.ai Energy Hack; finalist projects in AI, venture capital, solar sales, and talent advisory hackathon contexts.
+## Experience
+- C24 Bank: Chatbot Intern, Conversational AI (September 2026–present). Built automated end-to-end regression testing and investigated failures for the chatbot.
+- TMA IT Solutions: Co-Founder & CEO (March 2026–present). Leads discovery, product scoping and delivery for websites, automation software and AI agent workflows. Delivered projects for metafinanz (Allianz Group) and Rotary Starnberg.
 
-## Skills and topics
-- AI agents and agentic AI
-- Machine learning and anomaly detection
-- Multi-agent orchestration
-- LLM applications and prompt engineering
-- AI product management and presentation
-- Sales intelligence, voice AI, computer vision, and automation workflows
+## Selected projects
+- StealthDetection: First place, TUM.ai × Enerparc Hackathon; EUR 1,000 prize. Benchmarked 65 machine-learning models for solar inverter anomaly detection and paired them with a digital twin for asset monitoring. https://github.com/Alebabo/StealthDetection-Powerrangers
+- Ivy Reply: Agentic assistant for context-aware CRM replies in B2B negotiations, with human approval thresholds. Built for Ivy, now Augustus. https://github.com/Alebabo/ivy-sales-agent
+- MucLegal: Legal Loves Tech 2026 category winner, scored 9.5/10. Deterministic monitoring for prohibited online practices; selected by Verbraucherzentrale Bayern for further evaluation. https://github.com/Alebabo/MucLegal
 
-## Relevant projects
-- StealthDetection: Winner project with a 1000 EUR cash prize at the TUM.ai x Invertix.ai Energy Hack; machine learning model for energy-theft detection in smart-meter data with anomaly scoring and an operator investigation interface. LinkedIn proof: https://www.linkedin.com/feed/update/urn:li:activity:7477678664051142656/
-- traqr.ai: Finalist project; VC signal collection tool combining Supabase, X/Twitter, GitHub, LinkedIn, and alert data to map founder networks and surface early traction signals.
-- SolarPingu: Finalist project; autonomous solar sales agent system using Featherless AI and Qwen vision models for lead discovery, roof evaluation, qualification, and follow-up routing.
-- NUMI: AI sales call intelligence product using ElevenLabs for call capture, transcription, behavior scoring, and CRM-ready feedback.
-- Ivy Reply: Agentic sales workflow assistant built for getivy, today Augustus, a Peter Thiel-backed company.
-- TalentFlow Advisor: Finalist project; career and talent advisor prototype built for metafinanz, an Allianz company, for AI-assisted discovery, matching, and recommendation flows.
+## Latest TMA IT Solutions update
+LinkedIn post dated 2026-11-11, edited about 20 hours before the page was checked. TMA introduced its founding team and described an AI recruiting agent for an IT consultancy plus custom web projects for small-business clients. The post emphasized practical software, useful AI integrations and IT consulting. No post image was shown in the public LinkedIn preview.
+Source: https://www.linkedin.com/company/tma-it-solutions/
 
 ## Links
 - Portfolio: https://alessandro-bonanno.vercel.app/

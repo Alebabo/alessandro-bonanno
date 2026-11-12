@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alessandro-bonanno.vercel.app/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -13,33 +13,23 @@
     </image:image>
     <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/StealthDetection_Final/Folie1.PNG</image:loc>
-      <image:title>StealthDetection digital twins pitch deck cover</image:title>
-      <image:caption>Digital Twins of Solar Plants pitch deck cover for the StealthDetection machine learning project.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://alessandro-bonanno.vercel.app/pictures/traqr/Screenshot%202026-05-05%20000846.png</image:loc>
-      <image:title>traqr.ai founder signals thumbnail</image:title>
-      <image:caption>Founder signal interface for the traqr.ai venture capital intelligence project.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://alessandro-bonanno.vercel.app/pictures/SolarPingu/Screenshot%202026-05-29%20150002.png</image:loc>
-      <image:title>SolarPingu app screenshot</image:title>
-      <image:caption>SolarPingu app screenshot for a multi-agent solar sales workflow.</image:caption>
+      <image:title>StealthDetection solar digital twin pitch deck</image:title>
+      <image:caption>Pitch deck for StealthDetection, a solar inverter anomaly detection project paired with a digital twin.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/Ivyreply/ivy-reply-deckblatt.png</image:loc>
       <image:title>Ivy Reply hackathon project cover</image:title>
-      <image:caption>Deck cover for Ivy Reply, an agentic AI sales workflow assistant built for getivy.</image:caption>
+      <image:caption>Deck cover for Ivy Reply, an agentic assistant for context-aware CRM replies in B2B negotiations.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://alessandro-bonanno.vercel.app/pictures/talentflow/metafinanz-x-talentflow-deckblatt.png</image:loc>
-      <image:title>metafinanz x TalentFlow cover</image:title>
-      <image:caption>Deck cover for TalentFlow Advisor, a finalist AI talent matching prototype built for metafinanz.</image:caption>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/MucLegal/muclegal-logo-dark.png</image:loc>
+      <image:title>MucLegal logo</image:title>
+      <image:caption>MucLegal, a legal tech project selected for further evaluation by Verbraucherzentrale Bayern.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://alessandro-bonanno.vercel.app/llms.txt</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
