@@ -9,7 +9,7 @@ Alessandro Bonanno is a Munich-based AI product builder and TUM Information Syst
 
 ## Experience
 - C24 Bank: Chatbot Intern, Conversational AI (September 2026–present). Built automated end-to-end regression testing and investigated failures for the chatbot.
-- TMA IT Solutions: Co-Founder & CEO (March 2026–present). Leads discovery, product scoping and delivery for websites, automation software and AI agent workflows. Delivered projects for metafinanz (Allianz Group) and Rotary Starnberg.
+- TMA IT Solutions: Co-Founder & CEO (March 2026–present). Leads discovery, product scoping and delivery for websites, automation software and AI agent workflows. Delivered an AI recruiting agent for a major IT consultancy and custom web applications for small-business clients.
 
 ## Selected projects
 - StealthDetection: First place, TUM.ai × Enerparc Hackathon; EUR 1,000 prize. Benchmarked 65 machine-learning models for solar inverter anomaly detection and paired them with a digital twin for asset monitoring. https://github.com/Alebabo/StealthDetection-Powerrangers
