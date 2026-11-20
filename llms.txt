@@ -13,7 +13,6 @@ Alessandro Bonanno is a Munich-based AI product builder and TUM Information Syst
 
 ## Selected projects
 - StealthDetection: First place, TUM.ai × Enerparc Hackathon; EUR 1,000 prize. Benchmarked 65 machine-learning models for solar inverter anomaly detection and paired them with a digital twin for asset monitoring. https://github.com/Alebabo/StealthDetection-Powerrangers
-- Ivy Reply: Agentic assistant for context-aware CRM replies in B2B negotiations, with human approval thresholds. Built for Ivy, now Augustus. https://github.com/Alebabo/ivy-sales-agent
 - MucLegal: Legal Loves Tech 2026 category winner, scored 9.5/10. Deterministic monitoring for prohibited online practices; selected by Verbraucherzentrale Bayern for further evaluation. https://github.com/Alebabo/MucLegal
 - History.AI (January 2023): Early LLM wrapper built on the OpenAI GPT-3 API before the ChatGPT API existed. Explains any historical event, person or development as bullet points split into cause, trigger and consequences, in German or English.
 
