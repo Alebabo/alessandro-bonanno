@@ -27,6 +27,16 @@
       <image:caption>MucLegal, a legal tech project selected for further evaluation by Verbraucherzentrale Bayern.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/MucLegal/beweislab-scan-ablauf.png</image:loc>
+      <image:title>MucLegal BeweisLab scan pipeline</image:title>
+      <image:caption>Deterministic scan pipeline in MucLegal BeweisLab: load, normalize, hash with SHA-256 and compare paragraphs.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/MucLegal/beweislab-decathlon-vergleich.png</image:loc>
+      <image:title>MucLegal BeweisLab document comparison</image:title>
+      <image:caption>Side-by-side comparison of an archived and a current terms-and-conditions version in MucLegal BeweisLab.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/HistoryAI/history-ai-background.jpg</image:loc>
       <image:title>History.AI background image</image:title>
       <image:caption>History.AI, an early GPT-3 wrapper from January 2023 that explains historical events as bullet points split into cause, process and consequences.</image:caption>
