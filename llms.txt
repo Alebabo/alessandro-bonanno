@@ -2,7 +2,7 @@
 
 URL: https://alessandro-bonanno.vercel.app/
 Language: en
-Last updated: 2026-11-12
+Last updated: 2026-11-20
 
 ## Summary
 Alessandro Bonanno is a Munich-based AI product builder and TUM Information Systems student. He works across conversational AI, product discovery, software engineering and automation.
@@ -15,6 +15,7 @@ Alessandro Bonanno is a Munich-based AI product builder and TUM Information Syst
 - StealthDetection: First place, TUM.ai × Enerparc Hackathon; EUR 1,000 prize. Benchmarked 65 machine-learning models for solar inverter anomaly detection and paired them with a digital twin for asset monitoring. https://github.com/Alebabo/StealthDetection-Powerrangers
 - Ivy Reply: Agentic assistant for context-aware CRM replies in B2B negotiations, with human approval thresholds. Built for Ivy, now Augustus. https://github.com/Alebabo/ivy-sales-agent
 - MucLegal: Legal Loves Tech 2026 category winner, scored 9.5/10. Deterministic monitoring for prohibited online practices; selected by Verbraucherzentrale Bayern for further evaluation. https://github.com/Alebabo/MucLegal
+- History.AI (January 2023): Early LLM wrapper built on the OpenAI GPT-3 API before the ChatGPT API existed. Explains any historical event, person or development as bullet points split into cause, trigger and consequences, in German or English.
 
 ## Latest TMA IT Solutions update
 LinkedIn post dated 2026-11-11, edited about 20 hours before the page was checked. TMA introduced its founding team and described an AI recruiting agent for an IT consultancy plus custom web projects for small-business clients. The post emphasized practical software, useful AI integrations and IT consulting. No post image was shown in the public LinkedIn preview.
