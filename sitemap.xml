@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alessandro-bonanno.vercel.app/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -31,10 +31,20 @@
       <image:title>MucLegal logo</image:title>
       <image:caption>MucLegal, a legal tech project selected for further evaluation by Verbraucherzentrale Bayern.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/HistoryAI/history-ai-background.jpg</image:loc>
+      <image:title>History.AI background image</image:title>
+      <image:caption>History.AI, an early GPT-3 wrapper from January 2023 that explains historical events as bullet points split into cause, trigger and consequences.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alessandro-bonanno.vercel.app/pictures/HistoryAI/docker-hub-history-ai.png</image:loc>
+      <image:title>History.AI on Docker Hub</image:title>
+      <image:caption>Docker Hub page of the History.AI container image with 107 pulls.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://alessandro-bonanno.vercel.app/llms.txt</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
