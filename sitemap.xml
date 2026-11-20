@@ -29,7 +29,7 @@
     <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/HistoryAI/history-ai-background.jpg</image:loc>
       <image:title>History.AI background image</image:title>
-      <image:caption>History.AI, an early GPT-3 wrapper from January 2023 that explains historical events as bullet points split into cause, trigger and consequences.</image:caption>
+      <image:caption>History.AI, an early GPT-3 wrapper from January 2023 that explains historical events as bullet points split into cause, process and consequences.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://alessandro-bonanno.vercel.app/pictures/HistoryAI/docker-hub-history-ai.png</image:loc>
